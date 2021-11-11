@@ -1,6 +1,3 @@
-// const sizes: string[] = ['small', 'medium', 'large'];
-// const sizes: number[] = [1, 2, 3];
+let pizza: [string, number, boolean];
 
-let topping: Array<string>;
-
-topping = ['xs', 'xl', 'ms'];
+pizza = ['Pepperoni', 20, true]
