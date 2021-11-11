@@ -1,11 +1,17 @@
-type Pizza = { name: string; topping: number };
-
-const pizza: Pizza = { name: 'Blazzing', topping: 5 };
-
-const serialized = JSON.stringify(pizza);
-
-function getNameFromJSON(obj: string) {
-  return (JSON.parse(obj) as Pizza).topping;
+enum Sizes {
+  Small = 'small',
+  Medium = 'medium',
+  Large = 'large',
 }
 
-getNameFromJSON(serialized)
+let selected: Sizes = Sizes.Small;
+
+function updateSize(size: Sizes): void {
+  selected = size;
+}
+
+console.log(selected)
+
+updateSize(Sizes.Large);
+
+console.log(selected)
