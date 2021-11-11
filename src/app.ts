@@ -1,3 +1,10 @@
-let pizza: [string, number, boolean];
+type PizzaSize = 'xl' | 'ms' | 'lg';
+type CallBack = (pizza: PizzaSize) => void
 
-pizza = ['Pepperoni', 20, true]
+let pizzaSize: PizzaSize = 'xl';
+
+const selectSize: CallBack = (x) => {
+  pizzaSize = x;
+};
+
+selectSize('lg');
