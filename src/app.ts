@@ -1,6 +1,6 @@
 
-class Sizes {
-  constructor(public sizes: string[]) { }
+abstract class Sizes {
+  constructor(protected sizes: string[]) { }
   
   set availableSizes(sizes: string[]) {
     this.sizes = sizes;
@@ -28,6 +28,10 @@ class Pizza extends Sizes {
     super(sizes);
   }
 
+  public updateSizes(sizes: string[]) {
+    this.sizes.push(...sizes)
+  }
+
   addTopping(topping: string) {
     this.toppings.push(topping);
   }
@@ -41,6 +45,7 @@ console.log(pizza.availableSizes);
 pizza.availableSizes = ['large', 'extra large'];
 console.log(pizza.availableSizes)
 
+pizza.updateSizes(['double extra', 'thrible extra large'])
 
 pizza.addTopping('Pepperoni');
 pizza.addTopping('Pepperoni2');
