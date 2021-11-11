@@ -1,16 +1,6 @@
-/* let pizza: { name: string; price: number; foo: string };
+// const sizes: string[] = ['small', 'medium', 'large'];
+// const sizes: number[] = [1, 2, 3];
 
-pizza = {
-  name: 'plan old',
-  price: 20,
-  foo: 'asdf',
-}; */
+let topping: Array<string>;
 
-let pizza: { name: string; price: number; foo: string; getName(): string } = {
-  name: 'plan old',
-  price: 20,
-  foo: 'asdf',
-  getName() {
-    return this.name;
-  },
-};
+topping = ['xs', 'xl', 'ms'];
