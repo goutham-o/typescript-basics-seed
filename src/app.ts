@@ -1,9 +1,6 @@
-let selectedTopping: string = 'pepperoni';
-
-function selectTopping(topping: string): void {
-  selectedTopping = topping;
+function orderError(error: string): never {
+  throw new Error(error);
+  //never going to return a value!
 }
 
-selectTopping('bacon');
-
-console.log(selectedTopping);
+orderError('something wen wrong');
