@@ -1,11 +1,9 @@
-const pizzas: number = 5
+let selectedTopping: string = 'pepperoni';
 
-function officeDiscount(order: number): boolean {
-  return order > 5;
+function selectTopping(topping: string): void {
+  selectedTopping = topping;
 }
 
-if (officeDiscount(pizzas)) {
-  console.log(true);
-} else {
-  console.log(false);
-}
+selectTopping('bacon');
+
+console.log(selectedTopping);
