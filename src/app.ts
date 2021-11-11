@@ -1,36 +1,24 @@
-/* type Pizza = {
-  name: string;
+interface Sizes {
   sizes: string[];
-};
+}
+
+interface Pizza  extends Sizes {
+  name: string;
+  getAvailableSizes(): string[];
+}
 
 let pizza: Pizza;
 
-function createPizza(name: string, sizes: string[]): Pizza {
+function createPizza(name: string, sizes: string[]) {
   return {
     name,
     sizes,
-  };
+    getAvailableSizes() {
+      return this.sizes;
+    },
+  } as Pizza;
 }
 
 pizza = createPizza('Pepperoni', ['small', 'large', 'medium']);
 
-console.log(pizza)
- */
-
-interface Pizza  {
-  name: string;
-  sizes: string[];
-};
-
-let pizza: Pizza;
-
-function createPizza(name: string, sizes: string[]): Pizza {
-  return {
-    name,
-    sizes,
-  };
-}
-
-pizza = createPizza('Pepperoni', ['small', 'large', 'medium']);
-
-console.log(pizza)
+console.log(pizza);
